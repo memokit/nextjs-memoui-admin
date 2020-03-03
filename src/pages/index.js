@@ -5,7 +5,7 @@ SectionHome.getInitialProps = async ({pathname }) => {
 
   console.log(pathname);
 
-  return {};
+  return {pathname};
   
 };
 
