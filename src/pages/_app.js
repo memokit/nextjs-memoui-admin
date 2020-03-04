@@ -5,7 +5,6 @@
 =========================================================
 
 */
-// import React from "react";
 import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from 'next/head';
@@ -16,7 +15,7 @@ import Router from "next/router";
 // import MemouiTheme from 'components/Theme/MemouiTheme';
 
 
-import "assets/scss/memoui.scss?v=1.0.0";
+// import "assets/scss/memoui.scss?v=1.0.0";
 
 // Router.events.on("routeChangeStart", url => {
 //   console.log(`Loading: ${url}`);
