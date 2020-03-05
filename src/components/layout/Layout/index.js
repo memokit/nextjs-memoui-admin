@@ -16,10 +16,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-
+import HeadBar from './HeadBar';
 import Head from 'next/head';
 
-import styles from "assets/jss/app/pages/layout";
+import styles from "assets/jss/app/components/layout";
 
 const useStyles = makeStyles(styles);
 
@@ -46,8 +46,8 @@ function Layout({ children, title = 'Memo' }) {
                 />
             </Head>
             <div className={classes.root}>
-                <CssBaseline></CssBaseline>
-                <AppBar
+                
+                {/* <AppBar
                     position="fixed"
                     className={clsx(classes.appBar, {
                         [classes.appBarShift]: open,
@@ -69,7 +69,8 @@ function Layout({ children, title = 'Memo' }) {
                             Mini variant drawer
                         </Typography>
                     </Toolbar>
-                </AppBar>
+                </AppBar> */}
+                <HeadBar></HeadBar>
                 <Drawer
                     variant="permanent"
                     className={clsx(classes.drawer, {
