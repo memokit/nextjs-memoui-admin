@@ -20,6 +20,7 @@ import HeadBar from './HeadBar';
 import Head from 'next/head';
 
 import styles from "assets/jss/app/components/layout";
+import LeftSideBar from './LeftSideBar';
 
 const useStyles = makeStyles(styles);
 
@@ -71,7 +72,8 @@ function Layout({ children, title = 'Memo' }) {
                     </Toolbar>
                 </AppBar> */}
                 <HeadBar></HeadBar>
-                <Drawer
+                <LeftSideBar></LeftSideBar>
+                {/* <Drawer
                     variant="permanent"
                     className={clsx(classes.drawer, {
                         [classes.drawerOpen]: open,
@@ -107,7 +109,7 @@ function Layout({ children, title = 'Memo' }) {
                             </ListItem>
                         ))}
                     </List>
-                </Drawer>
+                </Drawer> */}
                 <main className={classes.content}>
                     <div className={classes.toolbar}> </div>
                     <div>
