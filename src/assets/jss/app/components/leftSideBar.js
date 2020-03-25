@@ -15,10 +15,11 @@ const style = theme => ({
         width: drawerWidth,
     },
     menuItem: {
+        color: '#FFF',
         width: drawerWidth,
     },
     menuItemIcon: {
-        color: '#97c05c',
+        color: '#FFF',
     },
     drawer: {
         width: drawerWidth,

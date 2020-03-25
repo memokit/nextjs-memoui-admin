@@ -22,6 +22,11 @@ const appMenuItems = [
     Icon: IconDashboard,
   },
   {
+    name: 'Exam',
+    link: '/exam',
+    Icon: IconShoppingCart,
+  },
+  {
     name: 'Orders',
     link: '/orders',
     Icon: IconShoppingCart,

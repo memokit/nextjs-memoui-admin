@@ -5,4 +5,6 @@ https://medium.com/@modularcoder/reactjs-multi-level-sidebar-navigation-menu-wit
 =======
 # Web Admin
 
-update
+# Git
+## update code from github to kssp gitlab
+git pull origin master && git push kssp-origin master

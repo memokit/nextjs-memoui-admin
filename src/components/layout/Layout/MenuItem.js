@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
+import styles from "assets/jss/app/components/leftSideBar";
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -7,7 +8,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Collapse from '@material-ui/core/Collapse';
-
+import Link from 'next/link'
 import IconExpandLess from '@material-ui/icons/ExpandLess';
 import IconExpandMore from '@material-ui/icons/ExpandMore';
 
@@ -29,8 +30,12 @@ import IconExpandMore from '@material-ui/icons/ExpandMore';
 //   items?: AppMenuItemProps[]
 // }
 
+const useStyles = makeStyles(styles);
+
 const MenuItem = props => {
-  const { name, Icon, items = [] } = props
+  console.log(props);
+  
+  const { name, link, Icon, items = [] } = props
   const classes = useStyles()
   const isExpandable = items && items.length > 0
   const [open, setOpen] = React.useState(false)
@@ -47,7 +52,10 @@ const MenuItem = props => {
           <Icon />
         </ListItemIcon>
       )}
-      <ListItemText primary={name} inset={!Icon} />
+      {/* <ListItemText primary={name} inset={!Icon} /> */}
+      <Link href={link != undefined? link : ''}>
+          <a>{name}</a>
+        </Link>
       {/* Display the expand menu if the item has children */}
       {isExpandable && !open && <IconExpandMore />}
       {isExpandable && open && <IconExpandLess />}
@@ -75,13 +83,13 @@ const MenuItem = props => {
 
 // AppMenuItem.propTypes = AppMenuItemPropTypes
 
-const useStyles = makeStyles(theme =>
-  createStyles({
-    menuItem: {},
-    menuItemIcon: {
-      color: '#97c05c',
-    },
-  }),
-)
+// const useStyles = makeStyles(theme =>
+//   createStyles({
+//     menuItem: {},
+//     menuItemIcon: {
+//       color: '#97c05c',
+//     },
+//   }),
+// )
 
 export default MenuItem;

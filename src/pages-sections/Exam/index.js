@@ -1,13 +1,12 @@
 import Layout from 'components/layout/Layout';
-import CardContent from '@material-ui/core/CardContent';
 import Container from '@material-ui/core/Container';
 
-function SectionHome() {
+function SectionExam() {
 
     return (
         <Layout title="Hello Indy">
-            <Container>sssss</Container>
+            <Container>Exam Page</Container>
         </Layout>
     );
 }
-export default SectionHome;
+export default SectionExam;
